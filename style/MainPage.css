@@ -1,0 +1,243 @@
+/******** Main styles ********/
+@font-face {
+    font-family: 'DiabloLight';
+    src: url('/assets/font/DiabloLight.eot?#iefix') format('embedded-opentype'),  url('/assets/font/DiabloLight.woff') format('woff'), url('/assets/font/DiabloLight.ttf')  format('truetype'), url('/assets/font/DiabloLight.svg#DiabloLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body{
+    font-family: 'DiabloLight';
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.content-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.mp-top-half{
+    height: 50%;
+    width: 100%;
+    /*border-bottom: 5px solid white;*/
+    box-shadow:  0px -20px 40px 15px black inset;
+    background: url('/assets/img/backgrounds/diablo_01.jpg') no-repeat center;
+    background-size: 100%;
+    transition: height 500ms ease;
+}
+.mp-bottom-half{
+    display: inline-block;
+    margin-top: 0;
+    height: 50%;
+    width: 100%;
+    background-color: darkslategray;
+    transition: margin-top 500ms ease;
+}
+.mp-middle-content{
+    display: inline-block;
+    height: 0;
+    background: url('/assets/img/backgrounds/diablo_02.jpg') no-repeat center;
+    width: 100%;
+    transition: height 500ms ease;
+}
+.mp-middle-content--maximized{
+    height: 75%;
+}
+.mp-top-half--minimized{
+    height: 15%;
+}
+.mp-bottom-half--maximized{
+    height: 85%;
+}
+.mp-bottom-half--small{
+    height:100px;
+}
+/********************************/
+
+/******** Game select styles ********/
+.mp-game-select-container{
+    width: 770px;
+    height: 200px;
+    position: absolute;
+    left:0; right:0; top: 0; bottom: 0;
+    margin: auto;
+    transition: top 2s ease, right 1s ease, bottom 500ms ease, left 1s ease;
+}
+.mp-game-select{
+    opacity: 1.0;
+    height: 200px;
+    width: 200px;
+    margin: 0 20px;
+    /*border: 5px solid white;*/
+    border-radius: 100px;
+    position: relative;
+    display: inline-block;
+    transition: box-shadow 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+.mp-game-select--diablo{
+    background: url('/assets/img/d3_ros_logo.png') no-repeat center;
+    background-size: 410px;
+    animation: pulse 4s linear infinite;
+}
+.mp-game-select--bf4{
+    background: url('/assets/img/bf4_logo.jpg') no-repeat center;
+    background-size: 300px;
+}
+.mp-game-select--h1z1{
+    background: url('/assets/img/h1z1_logo.png') no-repeat center;
+    background-size: 360px;
+}
+.mp-game-select:hover{
+    /*border: 5px solid red;*/
+    box-shadow: 5px 5px 40px 15px black;
+    cursor: pointer;
+}
+.mp-game-select--invisible{
+    opacity: 0;
+}
+.mp-game-select-container--left{
+    right: 100%;
+}
+.mp-game-select-container--top{
+    bottom: 80%;
+}
+.mp-game-select--bottom{
+    top: 100%;
+}
+/********************************/
+
+/******** Bottom half styles ********/
+
+.mp-bottom-text-wrapper{
+    width: 770px;
+    height: 60px;
+    position: relative;
+    left:0; right:0; top: 120px; bottom: 0;
+    margin: auto;
+}
+.mp-bottom-text-wrapper--top{
+    top: 10px;
+}
+.zfg-text{
+    font-family: DiabloLight;
+    height: 60px;
+    width: 200px;
+    margin: 0 25px;
+    position: relative;
+    display: inline-block;
+    font-size: 50px;  font-weight: bold;
+    color: darkslategray;
+    text-align: center;
+    transition: color 500ms;
+}
+.zfg-text--white{
+    color: white;
+}
+/********************************/
+/* Middle styles */
+.mp-middle-nav{
+    z-index: -1;
+    display: inline-block;
+    width: 200px;
+    height: 550px;
+    margin-left: 24px;
+    background: url("/assets/img/banner/banner_03.jpg") center no-repeat;
+    box-shadow: 5px 5px 40px 15px black;
+    border-radius: 10px;
+}
+.mp-middle-data{;
+    display: inline-block;
+    /*background-color: silver;*/
+    height: 500px;
+    margin-top: 50px;
+    width: calc(100% - 272px);
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: opacity 500ms ease;
+}
+.mp-middle-data-menuslot{
+    background: #ffffff;
+    height: 50px;
+    width: 490px;
+    border-radius: 0 0 10px 0;
+    opacity: 0;
+    display: none;
+}
+.mp-middle-article{
+    border-radius: 10px;
+    height: 420px;
+    margin: 15px;
+    padding-top: 24px;
+    background-color: none;
+}
+/*****************/
+/* Template styles */
+.profile-template{
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 21%;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+.profile-template_list-of-heroes li {
+    list-style-type: none;
+    padding: 28px 15px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: white;
+    box-shadow: 0px 0px 40px 10px black inset;
+    cursor: pointer;
+}
+.profile-template_list-of-heroes li:hover{
+    box-shadow: 0px 0px 45px 15px black inset;
+}
+.profile-template_member-name{
+    margin-bottom: 10px;
+    padding: 5px 5px;
+    border-bottom: 1px solid white;
+}
+.profile-template_hero-name{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    display: inline-block;
+}
+.profile-template_hero-details{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 200px;
+    width: 100%;
+}
+.demon-hunter{
+    background: url("/assets/img/classes/dh_01.jpg") no-repeat center;
+}
+.witch-doctor{
+    background: url("/assets/img/classes/wd_01.jpg") no-repeat center;
+}
+.crusader{
+    background: url("/assets/img/classes/crus_01.jpg") no-repeat center;
+}
+.monk{
+    background: url("/assets/img/classes/monk_01.png") no-repeat center;
+}
+.barbarian{
+    background: url("/assets/img/classes/barb_01.jpg") no-repeat center;
+}
+.wizard{
+    background: url("/assets/img/classes/wizard_01.jpg") no-repeat center;
+}
+/*****************/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 black;
+    }
+
+    50% {
+        box-shadow: 5px 5px 40px 15px black;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 black;
+    }
+}
